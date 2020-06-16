@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import "colors";
+@import "breakpoints";
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.logo{
+.logo {
     height: 150px;
     position: absolute;
     top: -20px;
@@ -29,18 +33,34 @@ body {
         height: 5px;
         background: $myDarkGreen;
     }
+
+    @media only screen and (max-width: $miniLaptop) {
+        width: 60%;
+
+        >h1 {
+            font-size: 24px;
+        }
+    }
 }
 
 .splitter {
     height: 200px;
     width: 1px;
     background: #eee;
+
+    @media only screen and (max-width: $miniLaptop) {
+        display: none;
+    }
 }
 
 .container {
     width: 1200px;
     margin: auto;
     position: relative;
+
+    @media only screen and (max-width: $miniLaptop) {
+        width: 90vw;
+    }
 }
 
 .holder {
@@ -75,6 +95,17 @@ body {
         font-size: 18px;
         color: $myGrey;
     }
+
+    @media only screen and (max-width: $miniLaptop) {
+        >h1 {
+            width: 100%;
+            font-size: 36px;
+        }
+
+        >p {
+            font-size: 16px;
+        }
+    }
 }
 
 .story {
@@ -91,6 +122,15 @@ body {
             color: $myPara;
             margin-top: 0px;
             text-align: justify;
+        }
+
+        @media only screen and (max-width: $miniLaptop) {
+            flex-direction: column;
+
+            >p {
+                width: 100%;
+                margin-top: 30px;
+            }
         }
     }
 }
@@ -122,10 +162,35 @@ body {
             font-size: 18px;
         }
     }
+
+    @media only screen and (max-width: $miniLaptop) {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 100px;
+        >img {
+            height: auto;
+            width: 100%;
+            margin: 0px;
+            margin-bottom: 30px;
+        }
+
+        >div {
+            width: 95%;
+            margin: auto;
+
+            >q {
+                font-size: 24px;
+            }
+
+            >p {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 .features {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -173,22 +238,48 @@ body {
             width: 20%;
         }
     }
+
+    @media only screen and (max-width: $miniLaptop) {
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .holder {
+            flex-direction: column-reverse;
+
+            >.points {
+                width: 100%;
+
+                >.point {
+                    width: 100%;
+                }
+            }
+
+            >h1 {
+                font-size: 32px;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+    }
 }
 
 .products {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 20vh;
+
     .holder {
         flex-direction: column;
+
         .wrapper {
             margin-top: 100px;
             display: flex;
             justify-content: space-between;
+
             >img {
                 width: 40%;
                 height: 300px;
@@ -196,92 +287,154 @@ body {
                 object-position: top;
                 border-radius: 5px;
             }
-            >div{
+
+            >div {
                 width: 50%;
-                >h3{
+
+                >h3 {
                     font-size: 24px;
                     margin: 0;
                     font-weight: 400;
                 }
-                >p{
+
+                >p {
                     margin: 0;
                     margin-bottom: 30px;
                 }
-                >.details{
+
+                >.details {
                     color: $myDarkGreen;
                 }
-                >.description{
+
+                >.description {
                     font-size: 16px;
                     color: $myPara;
+                }
+            }
+
+            @media only screen and (max-width: $miniLaptop) {
+                flex-direction: column;
+
+                >img {
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+
+                >div {
+                    width: 100%;
                 }
             }
         }
     }
 }
-.help{
+
+.help {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    >.holder{
-        flex-direction: column;;
-        >.boxes{
+
+    >.holder {
+        flex-direction: column;
+
+        >.boxes {
             margin-top: 50px;
             display: flex;
-            flex-flow: row wrap;
+            flex-direction: row wrap;
             justify-content: space-between;
             width: 100%;
-            >.box{
+
+            >.box {
                 min-width: 100px;
                 width: 28%;
                 padding: 15px 25px;
                 border: 1px solid #f4f4f4;
-                >h3{
+
+                >h3 {
                     font-size: 20px;
                     font-weight: 400;
                 }
-                >p{
+
+                >p {
                     color: $myPara;
                     font-size: 16px;
                     font-weight: 300;
                 }
             }
         }
+
+        @media only screen and (max-width: $miniLaptop) {
+            >.boxes {
+                flex-direction: column;
+
+                >.box {
+                    width: 90%;
+                    padding: 5%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 }
-footer{
+
+footer {
     background: $myDarkGreen;
     height: 40vh;
     width: 100%;
     display: flex;
-    >.container{
+
+    >.container {
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        >img{
+
+        >img {
             height: 150px;
         }
-        >.details{
+
+        >.details {
             display: flex;
             flex-direction: row;
             width: 40%;
-            >.footerBox{
+
+            >.footerBox {
                 width: 50%;
                 margin-right: 20px;
-                &:last-child(){
+
+                &:last-child() {
                     margin-right: 0px;
                 }
-                >h3{
+
+                >h3 {
                     color: $myLightGreen;
                     font-weight: 400;
                 }
-                >p{
+
+                >p {
                     color: $myWhite;
                     margin: 5px 0px;
                     font-size: 14px;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $miniLaptop) {
+        height: auto;
+        padding: 30px 0px;
+        .container {
+            flex-direction: column;
+
+            >.details {
+                width: 100%;
+                flex-direction: column;
+
+                >.footerBox {
+                    width: 100%;
                 }
             }
         }
