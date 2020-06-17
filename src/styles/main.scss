@@ -147,6 +147,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+
     >img {
         height: 100%;
         margin-right: 5%;
@@ -160,6 +161,7 @@ body {
         justify-content: center;
 
     }
+
     .review {
         >q {
             font-size: 32px;
@@ -187,6 +189,7 @@ body {
             width: 95%;
             margin: auto;
         }
+
         .review {
             >q {
                 font-size: 24px;
@@ -332,6 +335,41 @@ body {
 
                 >div {
                     width: 100%;
+                }
+            }
+        }
+    }
+
+    .catalogue {
+        width: 100%;
+        margin-top: 50px;
+        >h2{
+            font-size: 24px;
+        }
+        >#productContainer {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            >.product {
+                width: 22%;
+                padding: 10px;
+                border: 1px solid #eee;
+                cursor: pointer;
+                transition: 0.6s;
+                >img {
+                    height: 100px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                &:hover{
+                    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+                }
+                @media only screen and (max-width: $miniLaptop) {
+                    width: 90%;
+                    padding: 10px 5%;
+                    margin-bottom: 20px;
                 }
             }
         }

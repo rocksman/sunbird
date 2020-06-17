@@ -40,10 +40,16 @@ module.exports = {
                     "sass-loader"
                 ]
             },
-            {
-                test: /\.(png|svg|jpg|jpeg|ico|json)$/,
+            {   
+                type: 'javascript/auto',
+                test: /\.(png|svg|jpg|jpeg|ico|json)$/i,
                 use: [
-                    'file-loader'
+                    {
+                        loader: 'url-loader?name=/images/[name].[ext]',
+                        options: {
+                            limit: false,
+                        }
+                    }
                 ]
             }
         ]
