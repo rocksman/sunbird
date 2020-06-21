@@ -22,7 +22,7 @@ $('.review-carousel').slick({
 });
 
 function showProduct() {
-    let html = `<img src="${product.images}" alt="leaf straw"  />
+    let html = `<img src="${product.images}" alt="leaf straw"/>
                 <div>
                     <h3>${product.title}</h3>
                     <p class="details">${product.specs}</p>
@@ -35,7 +35,7 @@ function showCatalogue() {
     let array = data.filter(e => e.title !== product.title);
     let output = '';
     array.forEach(element => {
-        let html = `<div class="product" name="${element.title}">
+        let html = `<div class="product" name="${element.title}" data-aos="fade-up">
                         <img src="${element.images}" alt="${element.title}">
                         <h3>${element.title}</h3>
                         <p>${element.specs}</p>
