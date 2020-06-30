@@ -32,9 +32,9 @@ function showProduct() {
 }
 
 function showCatalogue() {
-    let array = data.filter(e => e.title !== product.title);
+    // let array = data.filter(e => e.title !== product.title);
     let output = '';
-    array.forEach(element => {
+    data.forEach(element => {
         let html = `<div class="product" name="${element.title}" data-aos="fade-up">
                         <img src="${element.images}" alt="${element.title}">
                         <h3>${element.title}</h3>

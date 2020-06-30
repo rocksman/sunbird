@@ -1,6 +1,7 @@
 import Regular from '../images/juice.jpg';
 import Shakes from '../images/milkshake.jpg';
 import Cocktail from '../images/cocktail.jpg';
+import Boba from '../images/bubbletea.jpg'
 
 let catalogue = [{
         "title": "Regular",
@@ -23,14 +24,8 @@ let catalogue = [{
     {
         "title": "BobaTea Straws",
         "specs": "Diameter. 0.511” Length Range-7”-12”",
-        "images": [Regular],
+        "images": [Boba],
         "description": "The BobaTea straw is thoughtfully designed wide enough to facilitate an uninterrupted profusion of the luscious chewy tapioca pearls for your palate while you sink into the flavours of your choice black or green pearl milk boba tea.<br/> And rest assured, your BobaTea straw is audaciously equipped with a pointed tip to pierce the seal on your tea jar or glass."
-    },
-    {
-        "title": "Carton Straws",
-        "specs": "Diameter: .157” Length 4”-5”",
-        "images": [Regular],
-        "description": "While the world seems to have given up on finding an eco-friendly straws for beverage cartons, here’s the good news-Carton straws are field tested and fully functional straws which can pierce the seal on the carton easily and give you an easy sip up experience…oh…for the bendy..we will have the good news soon…until then…this is not an bad option after all.  We can put up with a little inconvenience to keep that menacing plastic monster at bay."
     }
 ]
 
