@@ -100,9 +100,9 @@ body {
     }
 }
 .bigHeader{
-    width: 20%;
+    width: 30% !important;
     @media only screen and (max-width: $miniLaptop) {
-        width: 60%;
+        width: 60% !important;
     }
 }
 
