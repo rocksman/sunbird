@@ -4,7 +4,7 @@ import Cocktail from '../images/cocktail.jpg';
 import Boba from '../images/bubbletea.jpg'
 
 let catalogue = [{
-        "title": "Regular",
+        "title": "Regular Straws",
         "specs": "Diameter: 0.236” Length Range: 7”-12”",
         "images": [Regular],
         "description": "You can now have your  favorite nutrient laden tender coconut water straight out of the nut, or your  appetizing  lemon or orange juice out of the high ball glass with Slim, our tall, sleek and slender  straws. As you sip in from this narrow straw, the tangy flavour hits right on  your taste buds suffusing the energizing sensation to your entire being.  "
