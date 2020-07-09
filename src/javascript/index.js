@@ -55,6 +55,9 @@ function changeProduct(title) {
 }
 
 $(document).ready(function () {
+    setTimeout(()=>{
+        $('#loader').css("display", 'none');
+    }, 2000);
     product = data[0];
     showProduct();
     showCatalogue();
